@@ -7,8 +7,7 @@ import {Injectable} from "angular2/core";
 
 @Injectable()
 export class BidListService {
-    getBidList() :Bid[] {
-        return BIDS;
+    getBidList() {
+        return Promise.resolve(BIDS);
     }
 }
-

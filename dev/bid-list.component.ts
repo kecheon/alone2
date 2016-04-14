@@ -28,6 +28,7 @@ export class BidListComponent implements onInit {
         this.getBidList();
     }
     getBidList() {
-        this.bidListItems = this._bidListService.getBidList();
+        this._bidListService.getBidList()
+            .then(bidListItems => this.bidListItems = bidListItems);
     }
 }
