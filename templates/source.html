@@ -1,0 +1,40 @@
+<tr *ngIf="bid">
+    <td colspan="3">
+        <div class="container">
+            <div class="well">
+                <h4>
+                    {{ bid.number }}
+                    {{ bid.name }}
+                </h4>
+                <table class="">
+                </table>
+
+                <h4>입찰 자격 제한</h4>
+                <table class="">
+                    <tr>
+                        <th class="col-xs-2">지역</th>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>업종</th>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+                <h4>입찰 일정</h4>
+
+                <h4>첨부파일 다운로드</h4>
+            </div>
+            <hr>
+            <div>
+            </div>
+        </div>
+    </td>
+</tr>
+<script type="text/javascript">
+  function toFileDownload(fileSeq) {
+    var url = "http://www.g2b.go.kr:8081/ep/co/fileDownload.do?fileTask=NOTIFY&fileSeq=" + fileSeq;
+    location.href = url;
+  }
+</script>
