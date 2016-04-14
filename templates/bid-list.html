@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">공고 목록</h3>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-hover">
+      <thead>
+        <tr class="active"><th>공고번호</th><th>공고명</th><th>추정가격</th></tr>
+      </thead>
+      <tbody *ngFor="#item of bidListItems"
+            (click)="onSelectedBid(item)">
+        <tr>
+            <td>{{ item.number }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.estimation | number }}</td>
+        </tr>
+        <bid-detail [bid]="selectedBid" *ngIf="selectedBid === item"></bid-detail>
+      </tbody>
+    </table>
+  </div>
+  <div class="panel-footer">
+    <small>Built with BidSystem by InnoG2B</small>
+  </div>
+</div>
