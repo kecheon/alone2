@@ -9,7 +9,6 @@ import {BidDetailComponent} from "./bid-detail.component";
 @Component({
     selector: 'bid-list',
     templateUrl: '../templates/bid-list.html',
-    providers: [BidListService],
     directives: [BidDetailComponent] // bid-list.html template needs this to include it
 })
 export class BidListComponent implements onInit {
