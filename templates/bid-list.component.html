@@ -7,14 +7,13 @@
       <thead>
         <tr class="active"><th>공고번호</th><th>공고명</th><th>추정가격</th></tr>
       </thead>
-      <tbody *ngFor="#item of bidListItems"
-            (click)="onSelectedBid(item)">
+      <tbody *ngFor="#bid of bidListItems" (click)="goToDetail(bid)">
         <tr>
-            <td>{{ item.number }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.estimation | number }}</td>
+            <td>{{ bid.number }}</td>
+            <td>{{ bid.name }}</td>
+            <td>{{ bid.estimation | number }}</td>
         </tr>
-        <bid-detail [bid]="selectedBid" *ngIf="selectedBid === item"></bid-detail>
+        <bid-detail [bid]="selectedBid" *ngIf="selectedBid === bid"></bid-detail>
       </tbody>
     </table>
   </div>
